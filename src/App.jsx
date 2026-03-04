@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Register from "./pages/register";
 import Login from "./pages/login";
 import Home from "./pages/home";
@@ -23,6 +23,9 @@ function App() {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  const { currentUser } = <useContext>AuthContext</useContext>;
+  console.log(currentUser);
 
   return (
     <BrowserRouter>
