@@ -1,6 +1,20 @@
 import React from "react";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
   return (
     <div className="navbar">
       <span className="navLogo">Nexus Chat</span>
@@ -11,10 +25,12 @@ const navbar = () => {
           alt=""
         />
         <span>Suhani</span>
-        <button id="navButton">logout</button>
+        <button id="navButton" onClick={handleLogout}>
+          logout
+        </button>
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;
