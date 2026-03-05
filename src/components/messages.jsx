@@ -1,7 +1,7 @@
 import React from "react";
 import Message from "./message";
 
-const messages = () => {
+const Messages = () => {
   return (
     <div className="messages">
       <Message />
@@ -16,4 +16,4 @@ const messages = () => {
   );
 };
 
-export default messages;
+export default Messages;

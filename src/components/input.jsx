@@ -1,6 +1,6 @@
 import React from "react";
 
-const input = () => {
+const Input = () => {
   return (
     <div className="input">
       <input type="text" placeholder="Type something..." />
@@ -24,4 +24,4 @@ const input = () => {
   );
 };
 
-export default input;
+export default Input;

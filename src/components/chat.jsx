@@ -2,7 +2,7 @@ import React from "react";
 import Messages from "./messages";
 import Input from "./input";
 
-const chat = () => {
+const Chat = () => {
   return (
     <div className="chat">
       <div className="chatInfo">
@@ -28,4 +28,4 @@ const chat = () => {
   );
 };
 
-export default chat;
+export default Chat;

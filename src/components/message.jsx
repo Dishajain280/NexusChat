@@ -1,6 +1,6 @@
 import React from "react";
 
-const message = () => {
+const Message = () => {
   return (
     <div className="message owner">
       <div className="messageInfo">
@@ -21,4 +21,4 @@ const message = () => {
   );
 };
 
-export default message;
+export default Message;
